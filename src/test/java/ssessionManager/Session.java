@@ -12,7 +12,7 @@ public class Session {
 
     private Session() throws MalformedURLException {
         //driver = FactoryDevice.make("browserStack").create();
-        driver = FactoryDevice.make("browserStack").create();
+        driver = FactoryDevice.make("android").create();
     }
 
     public static Session getInstance() throws MalformedURLException {

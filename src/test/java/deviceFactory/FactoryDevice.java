@@ -11,7 +11,7 @@ public class FactoryDevice {
              device = new BrowserStack();
              break;
             default:
-              device = new BrowserStack();
+              device = new Android();
              break;
         }
         return device;

@@ -1,8 +1,7 @@
 package appiumControl;
 
-import deviceFactory.FactoryDevice;
-import org.junit.After;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import ssessionManager.Session;
 
@@ -20,6 +19,7 @@ public class Control {
 
     public void findControl() throws MalformedURLException {
         this.control = Session.getInstance().getDriver().findElement(this.locator);
+
     }
 
     public void click() throws MalformedURLException {
@@ -33,13 +33,6 @@ public class Control {
     }
 
     //parea verifcar si se ve contacto
-    public boolean isDisplayable() {
-        try {
-            this.findControl();
-            return this.control.isDisplayed();
-        }catch (Exception e){
-            return false;
-        }
-    }
+
 
 }

@@ -15,8 +15,8 @@ public class Android implements IDevice{
         DesiredCapabilities capabilities= new DesiredCapabilities();
         capabilities.setCapability("deviceName","ACCIONE-BT");
         capabilities.setCapability("platformVersion","7");
-        capabilities.setCapability("appPackage","com.vrproductiveapps.whendo");
-        capabilities.setCapability("appActivity","com.vrproductiveapps.whendo.ui.HomeActivity");
+        capabilities.setCapability("appPackage","com.appgenix.bizcal");
+        capabilities.setCapability("appActivity","com.appgenix.bizcal.LaunchActivity");
 
         capabilities.setCapability("platformName","Android");
 
@@ -25,7 +25,8 @@ public class Android implements IDevice{
 
         //ponemos en espera en 25 segundo s
         driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
-
         return driver;
+
+
     }
 }
