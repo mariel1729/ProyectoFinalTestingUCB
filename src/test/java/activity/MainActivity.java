@@ -1,20 +1,31 @@
 package activity;
 
 import appiumControl.Button;
-import org.openqa.selenium.By;
 import appiumControl.Label;
-
-import java.net.MalformedURLException;
+import appiumControl.TextBox;
+import org.openqa.selenium.By;
 
 
 public class MainActivity {
-    public Button optionListButton;
-    public Button addEventButton;
-    public Label verifyDay;
-    public MainActivity() {
+    public TextBox registerNumber;
+    public TextBox registerPin1;
+    public TextBox registerPin2;
+    public TextBox registerPin3;
+    public TextBox registerPin4;
 
-        optionListButton = new Button(By.className("android.widget.ImageButton"));
-        addEventButton = new Button(By.id("com.appgenix.bizcal:id/main_create"));
-        verifyDay = new Label(By.xpath("  /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.TextView[1]"));
+    public Button registerClick;
+    public Label verifyDay;
+
+    public MainActivity() {
+        registerNumber = new TextBox(By.id("com.bcp.bo.wallet:id/editTextPhoneNumber"));
+
+        registerPin1 = new TextBox(By.id("com.bcp.bo.wallet:id/editTextPin1"));
+        registerPin2 = new TextBox(By.id("com.bcp.bo.wallet:id/editTextPin2"));
+        registerPin3 = new TextBox(By.id("com.bcp.bo.wallet:id/editTextPin3"));
+        registerPin4 = new TextBox(By.id("com.bcp.bo.wallet:id/editTextPin4"));
+
+        registerClick = new Button(By.id("com.bcp.bo.wallet:id/buttonLogin"));
+
+        verifyDay = new Label(By.id("com.bcp.bo.wallet:id/textViewBalance"));
     }
 }

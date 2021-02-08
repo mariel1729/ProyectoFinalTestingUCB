@@ -10,13 +10,14 @@ import java.util.concurrent.TimeUnit;
 public class Android implements IDevice{
 
     @Override
+
     public AppiumDriver create() throws MalformedURLException {
         /*CONFIGURACION DE APPIUM  apk */
         DesiredCapabilities capabilities= new DesiredCapabilities();
-        capabilities.setCapability("deviceName","ACCIONE-BT");
-        capabilities.setCapability("platformVersion","7");
-        capabilities.setCapability("appPackage","com.appgenix.bizcal");
-        capabilities.setCapability("appActivity","com.appgenix.bizcal.LaunchActivity");
+        capabilities.setCapability("deviceName","ejemplo");
+        capabilities.setCapability("platformVersion","8");
+        capabilities.setCapability("appPackage","com.bcp.bo.wallet");
+        capabilities.setCapability("appActivity","com.bcp.bo.wallet.activities.Login");
 
         capabilities.setCapability("platformName","Android");
 
